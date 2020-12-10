@@ -387,8 +387,7 @@ get_dod_tbi <- function(year, page_number){
     ungroup() %>% 
     fill(service, .direction = "downup") %>% 
     filter(!is.na(severity)) %>% 
-    select(-group_n) %>% 
-    mutate(year = year)
+    select(-group_n)
   
   
 }
